@@ -1,0 +1,6 @@
+# このファイルを application-local.yml という名前でコピーし、
+# 3.3 で PostgreSQL をインストールしたときに決めたパスワードを書いてください。
+# application-local.yml は .gitignore に入っているので、Git にはコミットされません。
+spring:
+  datasource:
+    password: ここに自分のパスワード

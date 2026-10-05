@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: contactmanager
+  profiles:
+    # application-local.yml（各自が作成。Git には含めない）を読み込む
+    default: local
+  datasource:
+    url: jdbc:postgresql://localhost:5432/contact_manager
+    username: postgres
+    # パスワードは application-local.yml に書く
+  jpa:
+    hibernate:
+      # テーブルは Flyway のマイグレーションで作る。起動時にエンティティと一致しているかだけ検証する
+      ddl-auto: validate
+  flyway:
+    # 他の人が先にマージしたファイルより古い日時のマイグレーションも、後から適用できるようにする
+    out-of-order: true
